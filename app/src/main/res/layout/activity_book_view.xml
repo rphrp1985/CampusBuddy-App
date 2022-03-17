@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bookView">
+
+
+
+<ImageView
+    android:id="@+id/backButton"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:src="@drawable/ic_baseline_arrow_back_24"
+    app:layout_constraintHeight_percent=".1"
+    app:layout_constraintWidth_percent=".1"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+
+    />
+
+    <ImageView
+        android:id="@+id/deleteAll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent=".1"
+        app:layout_constraintHeight_percent=".1"
+        android:src="@drawable/ic_baseline_delete_forever_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/favButton"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/favButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_star_border_24"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintWidth_percent=".1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+    <ImageView
+        android:id="@+id/booklogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_menu_book_24"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintLeft_toRightOf="@+id/backButton"
+        app:layout_constraintRight_toLeftOf="@+id/favButton"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintWidth_percent=".25"
+
+
+        tools:ignore="MissingConstraints"
+
+        tools:layout_editor_absoluteY="55dp"
+
+        />
+
+    <TextView
+        android:id="@+id/bookname"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".6"
+        android:maxLines="2"
+        app:layout_constraintLeft_toLeftOf="@+id/booklogo"
+        app:layout_constraintRight_toRightOf="@id/booklogo"
+        app:layout_constraintTop_toBottomOf="@id/booklogo"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="BOOK 1 by Prianshu Prasad"
+        android:gravity="center"
+
+
+
+        />
+
+    <ImageView
+        android:id="@+id/download"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintWidth_percent=".1"
+        android:src="@drawable/ic_baseline_download_for_offline_24"
+        app:layout_constraintTop_toBottomOf="@id/bookname"
+
+        app:layout_constraintLeft_toLeftOf="@id/bookname"
+        android:layout_marginTop="20dp"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/open"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintWidth_percent=".1"
+        android:src="@drawable/ic_baseline_file_open_24"
+        app:layout_constraintTop_toBottomOf="@id/bookname"
+        app:layout_constraintRight_toRightOf="@id/bookname"
+        android:layout_marginTop="20dp"
+        />
+    <ImageView
+
+        android:id="@+id/feedback"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintWidth_percent=".1"
+        android:src="@drawable/ic_baseline_comment_24"
+        app:layout_constraintTop_toBottomOf="@id/bookname"
+        app:layout_constraintLeft_toRightOf="@id/download"
+        app:layout_constraintRight_toLeftOf="@id/open"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+
+
+       />
+
+    <TextView
+        android:id="@id/description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".51"
+
+        android:scrollbars="vertical"
+
+
+        
+app:layout_constraintTop_toBottomOf="@id/download"
+        android:layout_marginTop="20dp"
+
+        android:text="description"
+        android:gravity="start"
+
+        />
+
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/linearProgressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="80dp"
+        android:indeterminate="true"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

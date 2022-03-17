@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintWidth_percent=".1"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/profileName"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".8"
+        android:text="Login With Google"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/profilepic"
+        app:layout_constraintLeft_toRightOf="@id/profilepic"
+        app:layout_constraintBottom_toBottomOf="@id/profilepic"
+        android:layout_margin="10dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profilepic"
+        android:src="@drawable/ic_baseline_horizontal_rule_24"
+
+        />
+
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horizontal"
+
+        android:text="Notifications"
+
+        />
+
+    <Switch
+        android:id="@+id/switcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/textview1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textview1"
+
+
+/>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        app:layout_constraintTop_toBottomOf="@id/textview1"
+        android:layout_margin="10dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/margin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textview1"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_baseline_horizontal_rule_24"
+
+        />
+
+    <TextView
+        android:id="@id/textview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/margin2"
+        android:text="Activities and Notifications"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcview10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textview2"
+        android:layout_marginTop="10dp"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
